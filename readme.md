@@ -67,3 +67,4 @@ This project was developed through a collaborative effort as our Team Project fo
 | Eliot Choy               | [elioc1341](https://github.com/elioc1341) | TBD |
 | Henry Wong               | [eternal-loading-screen](https://github.com/eternal-loading-screen) | TBD |
 | Vinod Anbalagan          | [VinodAnbalagan](https://github.com/VinodAnbalagan) | TBD |
+
