@@ -20,7 +20,7 @@ As part of the Data Science and Machine Learning Certificate program at Universi
 
 **Profile:** 238 records, 7 features (`user_id`, `age`, `annual_income`, `purchase_amount`, `loyalty_score`, `region`, `purchase_frequency`).
 
-**Data Strategy:** The dataset's simplicity is our opportunity to showcase advanced **feature engineering**. The objective is to create feature sets capturing behavioral patterns (e.g., `spend_per_purchase`, `income_to_spend_ratio`) that will be the true drivers of our model's performance. 
+**Data Strategy:** The dataset's simplicity is our opportunity to showcase advanced **feature engineering**. The objective is to create feature sets capturing behavioral patterns (e.g., `spend_per_purchase`, `spend_to_income_ratio`) that will be the true drivers of our model's performance. 
 
 
 **Dataset Features:** 
@@ -29,14 +29,14 @@ As part of the Data Science and Machine Learning Certificate program at Universi
 | customer_id         | int64         | Unique ID of the customer      |
 | age                 | int64         | The age of the customer    |
 | annual_income       | int64         | The customer's annual income (in USD)     |
-| purchase_amount     | int64         | The total amount of purchases made by the customer (in USD)      |
+| purchase_amount     | int64         | The annual amount of purchases made by the customer (in USD)      |
 | purchase_frequency  | float64       | Frequency of customer purchases (number of times per year)    |
 | region              | object        | The region where the customer lives (North, South, East, West)     |
-| loyalty_score       | int64         | Customer's loyalty score (a value between 0-100)      |
+| loyalty_score       | int64         | Customer's loyalty score (a value between 0-10)      |
 
 
 **Risks and Limitations:**
-While the dataset is synthetic, the methods and frameworks applied are directly applicable to real-world customer datasets, ensuring our finding remain relevant to the problem. **To update further**
+While the dataset is synthetic, the methods and frameworks applied are directly applicable to real-world customer datasets, ensuring our findings remain relevant to the problem. **To update further**
 
 
 ## Exploratory Data Analysis
@@ -58,7 +58,7 @@ While the dataset is synthetic, the methods and frameworks applied are directly 
 
 
 ## Credits & Contributors
-This project is a collaborative effort for our Machine Learning project assignment.
+This project was developed through a collaborative effort as our Team Project for the Machine Learning Software Foundations Certificate. All team members contributed meaningfully to the outcome and are listed in alphabetical order below.
 
 | Member Name              | GitHub Account   | Reflection Video |
 |--------------------------|------------------|----------------- |
