@@ -1,57 +1,69 @@
 # Customer Intelligence Platform: Predictive Analytics for Proactive Marketing
 ### _Transforming Raw Data into Revenue with a Deployed, End-to-End ML System_
-## 1. Project Vision & Business Case
-**The Problem:** In today's hyper-competitive retail market, customer acquisition costs are **5 to 25 times higher** than customer retention. Yet, many businesses use one-size-fits-all marketing strategies that are inefficient and fail to engage customers effectively. The key to sustainable growth lies in understanding and anticipating customer needs.
-**Our Solution:** This project builds a deployable **Customer Intelligence Platform** that serves as a central engine for data-driven decision-making. We will develop a unified machine learning model that analyzes customer behavior to:
-1.  **Segment Customers** into actionable groups (e.g., *Champions, Loyal, At-Risk*).
-2.  **Predict Customer Lifetime Value (CLV)** to identify high-potential individuals.
-3.  **Generate a Churn Risk Score** to enable proactive retention campaigns.
-**Primary Objective:** To deliver a live, interactive web application that provides real-time, actionable insights, empowering marketing teams to personalize campaigns, reduce churn, and maximize return on investment (ROI).
----
-## 2. Goals & Success Metrics
-### Modeling Objectives
-We will develop a multi-output model or a suite of interconnected models to achieve the following performance goals. *(Note: These are initial targets and may be refined after exploratory data analysis.)*
-*   **CLV Prediction (Regression):**
-    *   **Goal:** Accurately forecast the potential future spend of a customer.
-    *   **Success Metric:** Achieve an **R² > 0.80** and **RMSE** significantly lower than the standard deviation of the purchase amount.
-*   **Churn Risk Classification (Classification):**
-    *   **Goal:** Precisely identify customers who are likely to churn. We will engineer a `is_at_risk` target label based on low loyalty, frequency, and spend.
-    *   **Success Metric:** Target a **F1-score > 0.80**, with a strong focus on **Precision (>0.75)** to ensure retention efforts are not wasted.
-*   **Customer Segmentation (Clustering):**
-    *   **Goal:** Discover meaningful, data-driven customer personas.
-    *   **Success Metric:** Achieve a **Silhouette Score > 0.55**, indicating distinct and well-separated clusters.
-### Business Deliverables
-*   **An Interactive Streamlit Dashboard:** A user-friendly interface for non-technical stakeholders to visualize segments, query individual customer risk/value scores, and understand model predictions (via SHAP).
-*   **An Automated Reporting Pipeline:** A simulated report generation system that summarizes key business KPIs (e.g., % of customers at risk, average CLV of new customers) for marketing teams.
----
-## 3. The Dataset
-*   **Source:** Customer Purchasing Behaviors Dataset ([Link to Kaggle/Source])
-*   **Profile:** 238 instances, 7 initial features (`user_id`, `age`, `annual_income`, `purchase_amount`, `loyalty_score`, `region`, `purchase_frequency`).
-*   **Data Strategy:** The dataset's simplicity is our opportunity to showcase advanced **feature engineering**. We will create a rich feature set capturing behavioral patterns (e.g., `spend_per_purchase`, `income_to_spend_ratio`) that will be the true drivers of our model's performance.
----
-## 4. Technical Architecture
-Our architecture is designed for reproducibility, scalability, and ease of deployment.
-*   **Core ML & Data Processing:** Python, Pandas, NumPy, Scikit-learn, XGBoost / LightGBM.
-*   **Advanced Modeling:** TensorFlow or PyTorch will be considered for exploring complex, non-linear patterns if initial models hit a performance plateau.
-*   **MLOps:** **MLflow** for robust experiment tracking, model registry, and versioning to ensure full reproducibility.
-*   **Feature Engineering:** A modular and automated pipeline for generating and testing new features.
-*   **Deployment & Visualization:** **Streamlit** for the interactive front-end, **Plotly** and **Seaborn** for dynamic visualizations, and **Docker** to containerize the entire application for one-command deployment.
----
-## 5. Risks & Mitigation Plan
-*   **Risk: Low Data Volume (238 records).**
-    *   **Description:** High risk of overfitting and poor generalization to new data.
-    *   **Mitigation:** This project will be framed as a **methodological proof-of-concept**. Our primary deliverable is a robust, reusable pipeline. We will use **rigorous cross-validation**, **regularization (L1/L2)**, and data augmentation techniques like **SMOTE** (for the classification task) while clearly documenting their impact.
-*   **Risk: Synthetic Data Lacks Real-World Complexity.**
-    *   **Description:** The data may not contain the noise, outliers, and complex correlations of a real business dataset.
-    *   **Mitigation:** We will focus on building an **agnostic and robust framework**. The value lies in the pipeline's design, feature engineering logic, and the dashboard's utility, which can be easily adapted to a real-world dataset. We may introduce synthetic noise to test model robustness.
-*   **Risk: Potential for Model Drift.**
-    *   **Description:** In a real-world scenario, customer behavior changes over time, degrading model performance.
-    *   **Mitigation:** We will design our system with this in mind. The MLOps component (MLflow) will track performance, and we will architect a **simulated model retraining pipeline**, demonstrating how the system would stay current in a production environment.
----
-## 6. Credits & Contributors
-This project is a collaborative effort for our Machine Learning university project.
-*   [Antonio M. Lancuentra] 
-*   [Vinod Anbalagan]
-*   [Eliot Choy]
-*   [Henry Wong]
-*   [Calvin Ho]
+
+As part of the Data Science and Machine Learning Certificate program at University of Toronto's Data Sciences Institute, our team selected the "Customer Purchasing Behaviors" dataset to demonstrate the technical and analytical skills developed throughout the course. 
+
+**To be updated once steps finalized.**
+
+
+## Business Case & Objectives
+**The Problem:** In today's hyper-competitive retail market, businesses face the challenge of acquiring and retaining customers to drive sustainable growth in the industry. Understanding the relationship between consumer demographics, loyalty, and spending patterns is crucial to identify ideal customer profiles to develop targeted strategies. This project explores whether customer spending can be accurately predicted from key variables such as age, annual income, and geographic region.
+
+**Objectives:** The goals of this project are to:
+1.  Build a regression model to predict customer spending based on demographic and behavioural factors.
+2.  Identify the most influential features that driver purchasing behaviours.
+3.  Evaluate model performance through regression metrics and analysis.
+
+
+## Dataset
+**Source:** [Customer Purchasing Behaviors Dataset](https://www.kaggle.com/datasets/hanaksoy/customer-purchasing-behaviors)
+
+**Profile:** 238 records, 7 features (`user_id`, `age`, `annual_income`, `purchase_amount`, `loyalty_score`, `region`, `purchase_frequency`).
+
+**Data Strategy:** The dataset's simplicity is our opportunity to showcase advanced **feature engineering**. The objective is to create feature sets capturing behavioral patterns (e.g., `spend_per_purchase`, `spend_to_income_ratio`) that will be the true drivers of our model's performance. 
+
+
+**Dataset Features:** 
+| Feature             | Type          | Description  |
+|---------------------|---------------|--------------|
+| customer_id         | int64         | Unique ID of the customer      |
+| age                 | int64         | The age of the customer    |
+| annual_income       | int64         | The customer's annual income (in USD)     |
+| purchase_amount     | int64         | The annual amount of purchases made by the customer (in USD)      |
+| purchase_frequency  | float64       | Frequency of customer purchases (number of times per year)    |
+| region              | object        | The region where the customer lives (North, South, East, West)     |
+| loyalty_score       | int64         | Customer's loyalty score (a value between 0-10)      |
+
+
+**Risks and Limitations:**
+While the dataset is synthetic, the methods and frameworks applied are directly applicable to real-world customer datasets, ensuring our findings remain relevant to the problem. **To update further**
+
+
+## Exploratory Data Analysis
+*   **TBD**
+
+
+## Regression Analysis & Testing
+*   **TBD**
+
+
+## Results
+*   **TBD**
+
+
+## Conclusions & Future Considerations
+**Key Takeaways:** **TBD**
+
+**Future Considerations:** **TBD**
+
+
+## Credits & Contributors
+This project was developed through a collaborative effort as our Team Project for the Machine Learning Software Foundations Certificate. All team members contributed meaningfully to the outcome and are listed in alphabetical order below.
+
+| Member Name              | GitHub Account   | Reflection Video |
+|--------------------------|------------------|----------------- |
+| Antonio M. Lancuentra    | [AntonioMLancuentra](https://github.com/AntonioMLancuentra) | TBD |
+| Calvin Ho                | [c5ho](https://github.com/c5ho) | TBD |
+| Eliot Choy               | [elioc1341](https://github.com/elioc1341) | TBD |
+| Henry Wong               | [eternal-loading-screen](https://github.com/eternal-loading-screen) | TBD |
+| Vinod Anbalagan          | [VinodAnbalagan](https://github.com/VinodAnbalagan) | TBD |
