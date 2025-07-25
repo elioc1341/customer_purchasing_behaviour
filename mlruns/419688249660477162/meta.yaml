@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/419688249660477162
+creation_time: 1753403602851
+experiment_id: '419688249660477162'
+last_update_time: 1753403602851
+lifecycle_stage: active
+name: nn-regression-experiment-processed

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/419688249660477162/6b29b347aab944ed9ac74abffbdf39c9/artifacts
+end_time: 1753408056975
+entry_point_name: ''
+experiment_id: '419688249660477162'
+lifecycle_stage: active
+run_id: 6b29b347aab944ed9ac74abffbdf39c9
+run_name: Fold_3_lr0.005_bs16_w512x512
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753408056844
+status: 3
+tags: []
+user_id: The Winner
