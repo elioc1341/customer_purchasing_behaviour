@@ -221,7 +221,7 @@ Given the time constraint for this project and the findings from testing, it is 
    - Perform A/B testing against simple baselines to confirm what can improve model predictions
    - Confirm that the results are reliable and still relevant to the business objectives and can resolve client's problem
 
-     
+
 
 ## Credits & Contributors
 This project was developed through a collaborative effort as our Team Project for the Machine Learning Software Foundations Certificate. All team members contributed meaningfully to the outcome and are listed in alphabetical order below.
@@ -230,6 +230,6 @@ This project was developed through a collaborative effort as our Team Project fo
 |--------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | Antonio M. Lancuentra    | [AntonioMLancuentra](https://github.com/AntonioMLancuentra)          | [Link](paste_your_link_here)|
 | Calvin Ho                | [c5ho](https://github.com/c5ho)                                      | [Link](paste_your_link_here)|
-| Eliot Choy               | [elioc1341](https://github.com/elioc1341)                            | [Link](paste_your_link_here)|
+| Eliot Choy               | [elioc1341](https://github.com/elioc1341)                            | [Link](https://drive.google.com/file/d/1_92ZJie72LRiiUEHGULJjhS0xlPO33pe/view?usp=sharing)|
 | Henry Wong               | [eternal-loading-screen](https://github.com/eternal-loading-screen)  | [Link](paste_your_link_here)|
 | Vinod Anbalagan          | [VinodAnbalagan](https://github.com/VinodAnbalagan)                  | [Link](paste_your_link_here)|
