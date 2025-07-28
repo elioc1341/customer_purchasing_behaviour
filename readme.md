@@ -206,63 +206,56 @@ The K-means clustering analysis identified 6 optimal customer segments:
 - Cluster Stability: Consistent across multiple runs
 - Segment Characteristics: Each cluster represents unique behavioral patterns
 
-**Customer Analytics XGBoost Report**
----
+## **Customer Analytics XGBoost Report**
 
-1. DATA OVERVIEW
-Total Customers: 238
+**Data Overview**
 
-Features: ['age', 'annual_income', 'purchase_amount', 'loyalty_score', 'region', 'purchase_frequency', 'region_encoded', 'cluster']
+- Total Customers: 238
+- Features:
+  - `age`
+  - `annual_income`
+  - `purchase_amount`
+  - `loyalty_score`
+  - `region`
+  - `purchase_frequency`
+  - `region_encoded`
+  - `cluster`
+- Age Range: 22 - 55
+- Income Range: $30,000 - $75,000
+- Purchase Range: $150 - $640
+- Loyalty Range: 3.0 - 9.5
 
-Age Range: 22 - 55
+# Model Performance
 
-Income Range: $30,000 - $75,000
+## LOYALTY Model
 
-Purchase Range: $150 - $640
+- RMSE: 0.0559
+- MAE: 0.0212
+- R2: 0.9992
 
-Loyalty Range: 3.0 - 9.5
+## SPENDING Model
 
-2. MODEL PERFORMANCE
-LOYALTY Model:
-rmse: 0.0559
+- RMSE: 4.7008
+- MAE: 1.5074
+- R2: 0.9990
 
-mae: 0.0212
+## REGION Model
 
-r2: 0.9992
+- Accuracy: 0.7708
 
-SPENDING Model:
-rmse: 4.7008
+# Key Business Insights
 
-mae: 1.5074
+- Low Loyalty Customers (<5): 51 (21.4%)
+- High Loyalty Customers (>8): 75 (31.5%)
+- Average Purchase Amount: $425.63
+- Median Purchase Amount: $440.00
+- Average Purchase Frequency: 19.8 times
 
-r2: 0.9990
-
-REGION Model:
-accuracy: 0.7708
-
-CLUSTERING Model:
-(Details to be added here, e.g., optimal K, silhouette score, or a note if it's purely for segmentation and not evaluated like supervised models)
-
-3. KEY BUSINESS INSIGHTS
-Low Loyalty Customers (<5): 51 (21.4%)
-
-High Loyalty Customers (>8): 75 (31.5%)
-
-Average Purchase Amount: $425.63
-
-Median Purchase Amount: $440.00
-
-Average Purchase Frequency: 19.8 times
-
-Regional Distribution:
-North: 78 customers (32.8%)
-
-South: 77 customers (32.4%)
-
-West: 77 customers (32.4%)
-
-East: 6 customers (2.5%)
----
+- Regional Distribution:
+  - North: 78 customers (32.8%)
+  - South: 77 customers (32.4%)
+  - West: 77 customers (32.4%)
+  - East: 6 customers (2.5%)
 
 ![Spending Model Performance](https://github.com/elioc1341/customer_purchasing_behaviour/blob/a03903fe8a8087e11b1f4bdbb58e694a72ccae49/reports/boosting/spending_regression_results.png)
 
