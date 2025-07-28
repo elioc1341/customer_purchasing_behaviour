@@ -71,7 +71,12 @@ Our architechture is designed for reproductibility, scalability, and ease of dep
 | plotly | 5.1.8 |
 | joblib | 1.3.2 |
 | os | Standard |
-| math | Standard | |
+| math | Standard | 
+| torch | 2.7.1+cu128 |
+| tqdm | 4.67.1 |
+| transformers | 4.53.2 |
+| accelerate | 1.8.1 |
+| torchvision | 0.22.1 ||
 
 ## Risks & Mitigation Plan
 
@@ -343,7 +348,30 @@ The K-means clustering analysis identified 6 optimal customer segments:
 
 <br/><br/>
 ## Neural Networks
---To be added--
+
+Analog to what we did with other Machine Learning approaches, here a simple neural network was trained to predict the amount a customer spends.  
+
+An extended dataset was created with engineered features that would not bring data leakage. Regarding the features used from the extended dataset:
+-	‘age’, 'annual_income', 'loyalty_score', 'purchase_frequency', from the original dataset.
+-	Plus: 'spend_per_purchase', 'spend_to_income_ratio', 'log_annual_income', 'log_purchase_frequency', 'region_grouped',  'is_high_value', 'is_champion'. 
+-	Details can be found in 0.feature_engineering.ipynb in folder src.
+
+The target to predict was ‘purchase_amount’.  
+
+Highlights of the process:
+-	Splitting: train, validation, test
+-	Cross validation: KFold 4 folds, each manually validated
+-	Architecture: Up to 4 hidden layers, up to 15,000+ neurons, up to 46M parameters
+-	Batch size and Learning rate: adaptive system
+-	Epochs: early stop, up to 10,000 epochs
+
+Highlights of the output:
+-	Logging: MLflow
+-	Best net: 32 neurons, 16 neurons, 8 neurons, 4 neurons, 1 output neuron
+-	Mean Absolute Error (mae): 1.11	R2: 1.00
+
+For further information, check folder Neural Networks inside Experiments and Reports.
+
 <br/><br/>
 ## Linear Regression
 --To be added--
