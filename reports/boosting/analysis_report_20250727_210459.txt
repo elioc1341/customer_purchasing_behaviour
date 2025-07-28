@@ -1,0 +1,44 @@
+CUSTOMER ANALYTICS COMPREHENSIVE REPORT
+Generated: 2025-07-27 21:04:59
+================================================================================
+
+1. DATA OVERVIEW
+   Total Customers: 238
+   Features: ['age', 'annual_income', 'purchase_amount', 'loyalty_score', 'region', 'purchase_frequency', 'region_encoded', 'cluster']
+   Age Range: 22 - 55
+   Income Range: $30,000 - $75,000
+   Purchase Range: $150 - $640
+   Loyalty Range: 3.0 - 9.5
+
+2. MODEL PERFORMANCE
+
+   LOYALTY Model:
+      • rmse: 0.0559
+      • mae: 0.0212
+      • r2: 0.9992
+
+   SPENDING Model:
+      • rmse: 4.7008
+      • mae: 1.5074
+      • r2: 0.9990
+
+   REGION Model:
+      • accuracy: 0.7708
+
+   CLUSTERING Model:
+
+3. KEY BUSINESS INSIGHTS
+   • Low Loyalty Customers (<5): 51 (21.4%)
+   • High Loyalty Customers (>8): 75 (31.5%)
+   • Average Purchase Amount: $425.63
+   • Median Purchase Amount: $440.00
+   • Average Purchase Frequency: 19.8 times
+
+   Regional Distribution:
+      • North: 78 customers (32.8%)
+      • South: 77 customers (32.4%)
+      • West: 77 customers (32.4%)
+      • East: 6 customers (2.5%)
+
+================================================================================
+Report generated successfully!
