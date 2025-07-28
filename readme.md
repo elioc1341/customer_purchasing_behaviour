@@ -207,8 +207,7 @@ The K-means clustering analysis identified 6 optimal customer segments:
 - Segment Characteristics: Each cluster represents unique behavioral patterns
 
 **Customer Analytics XGBoost Report**
-================================================================================
-
+---
 1. DATA OVERVIEW
    Total Customers: 238
    Features: ['age', 'annual_income', 'purchase_amount', 'loyalty_score', 'region', 'purchase_frequency', 'region_encoded', 'cluster']
@@ -246,8 +245,7 @@ The K-means clustering analysis identified 6 optimal customer segments:
    • South: 77 customers (32.4%)
    • West: 77 customers (32.4%)
    • East: 6 customers (2.5%)
-
-================================================================================
+---
 
 ![Spending Model Performance](https://github.com/elioc1341/customer_purchasing_behaviour/blob/a03903fe8a8087e11b1f4bdbb58e694a72ccae49/reports/boosting/spending_regression_results.png)
 
