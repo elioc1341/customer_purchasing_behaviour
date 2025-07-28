@@ -354,8 +354,6 @@ Example: Customer #23
 - Capacity Planning - High Frequency customers (>20 visits) need priority service.
 - Resource Allocation - Focus staff training on high value segment.
 
-**Future Considerations:** **TBD**
-
 ## Credits & Contributors
 
 This project was developed through a collaborative effort as our Team Project for the Machine Learning Software Foundations Certificate. All team members contributed meaningfully to the outcome and are listed in alphabetical order below.
