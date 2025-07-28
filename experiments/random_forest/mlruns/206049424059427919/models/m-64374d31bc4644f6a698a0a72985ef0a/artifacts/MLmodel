@@ -1,0 +1,39 @@
+artifact_path: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-64374d31bc4644f6a698a0a72985ef0a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.21
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-64374d31bc4644f6a698a0a72985ef0a
+model_size_bytes: 453913
+model_uuid: m-64374d31bc4644f6a698a0a72985ef0a
+prompts: null
+run_id: 06a98cd225b245558d5e37ade746dd83
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "age", "required": true}, {"type": "long", "name":
+    "annual_income", "required": true}, {"type": "double", "name": "spend_to_income_ratio",
+    "required": true}, {"type": "boolean", "name": "region_North", "required": true},
+    {"type": "boolean", "name": "region_South", "required": true}, {"type": "boolean",
+    "name": "region_West", "required": true}, {"type": "double", "name": "loyalty_score",
+    "required": true}, {"type": "double", "name": "age_adjusted_percentile", "required":
+    true}, {"type": "long", "name": "growth_potential_score", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-07-26 14:02:29.457773'

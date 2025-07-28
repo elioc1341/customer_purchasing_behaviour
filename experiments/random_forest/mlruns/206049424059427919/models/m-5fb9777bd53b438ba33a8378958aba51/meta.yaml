@@ -1,0 +1,10 @@
+artifact_location: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-5fb9777bd53b438ba33a8378958aba51/artifacts
+creation_timestamp: 1753415242567
+experiment_id: '206049424059427919'
+last_updated_timestamp: 1753415245674
+model_id: m-5fb9777bd53b438ba33a8378958aba51
+model_type: null
+name: feature_scaler
+source_run_id: 405d4c700b414fb494bb52daeac15b80
+status: 2
+status_message: null

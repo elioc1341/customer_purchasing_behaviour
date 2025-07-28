@@ -1,0 +1,10 @@
+artifact_location: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-903ab9a354fd47258655156c3c994192/artifacts
+creation_timestamp: 1753489386364
+experiment_id: '206049424059427919'
+last_updated_timestamp: 1753489388692
+model_id: m-903ab9a354fd47258655156c3c994192
+model_type: null
+name: random_forest_churn_model
+source_run_id: 17c8e71f0e8a4a64b3d908f6aed4e854
+status: 2
+status_message: null

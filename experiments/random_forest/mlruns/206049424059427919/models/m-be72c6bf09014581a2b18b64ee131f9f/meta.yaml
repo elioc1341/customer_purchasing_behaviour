@@ -1,0 +1,10 @@
+artifact_location: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-be72c6bf09014581a2b18b64ee131f9f/artifacts
+creation_timestamp: 1753582928596
+experiment_id: '206049424059427919'
+last_updated_timestamp: 1753582932150
+model_id: m-be72c6bf09014581a2b18b64ee131f9f
+model_type: null
+name: production_churn_model
+source_run_id: 2e9b6944edcb40bf92491dab7dbc7774
+status: 2
+status_message: null
