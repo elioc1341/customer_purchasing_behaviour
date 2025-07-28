@@ -4,7 +4,6 @@
 
 As part of the Data Science and Machine Learning Certificate program at University of Toronto's Data Sciences Institute, our team selected the "Customer Purchasing Behaviors" dataset to demonstrate the technical and analytical skills developed throughout the course.
 
-**To be updated once steps finalized.**
 
 ## Business Case & Objectives
 
