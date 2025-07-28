@@ -392,7 +392,6 @@ Based on the results of the linear regression models, it would appear that the m
 
 For the full information of the linear regression modelling performed, please refer to the Linear regression folder within the experiments folder.
 
-
 <br/><br/>
 ## Random Forest
 --To be added--
@@ -498,5 +497,5 @@ This project was developed through a collaborative effort as our Team Project fo
 | Antonio M. Lancuentra | [AntonioMLancuentra](https://github.com/AntonioMLancuentra)         | TBD              |
 | Calvin Ho             | [c5ho](https://github.com/c5ho)                                     | TBD              |
 | Eliot Choy            | [elioc1341](https://github.com/elioc1341)                           | TBD              |
-| Henry Wong            | [eternal-loading-screen](https://github.com/eternal-loading-screen) | [Video](https://youtu.be/qu6O-bv5TNQ)              |
+| Henry Wong            | [eternal-loading-screen](https://github.com/eternal-loading-screen) | [Video](https://youtu.be/lVY6GPIFggY)              |
 | Vinod Anbalagan       | [VinodAnbalagan](https://github.com/VinodAnbalagan)                 | TBD              |
