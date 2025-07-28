@@ -206,8 +206,7 @@ The K-means clustering analysis identified 6 optimal customer segments:
 - Cluster Stability: Consistent across multiple runs
 - Segment Characteristics: Each cluster represents unique behavioral patterns
 
-CUSTOMER ANALYTICS COMPREHENSIVE REPORT
-Generated: 2025-07-27 21:04:59
+**Customer Analytics XGBoost Report**
 ================================================================================
 
 1. DATA OVERVIEW
