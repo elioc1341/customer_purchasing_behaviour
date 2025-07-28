@@ -149,10 +149,6 @@ This will produce more meaningful and interpretable segments by avoiding multico
 Our plan to use tree-based models (Random Forest, etc.) is confirmed as the best approach.
 These models are robust to the data's structure, and we will proceed with a limited, carefully selected feature set.
 
-## Regression Analysis & Testing
-
-- **TBD**
-
 ## XG Boost
 
 ### **Executive Summary**
@@ -265,9 +261,12 @@ The K-means clustering analysis identified 6 optimal customer segments:
 
 ![XGBoost Feature IMportance](https://github.com/elioc1341/customer_purchasing_behaviour/blob/a03903fe8a8087e11b1f4bdbb58e694a72ccae49/reports/boosting/feature_importance.png)
 
-## Results
-
-- **TBD**
+## Neural Networks
+--To be added--
+## Linear Regression
+--To be added--
+## Random Forest
+--To be added--
 
 ## Conclusions & Future Considerations
 
