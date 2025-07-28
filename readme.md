@@ -622,4 +622,4 @@ This project was developed through a collaborative effort as our Team Project fo
 | Calvin Ho             | [c5ho](https://github.com/c5ho)                                     | TBD                                              |
 | Eliot Choy            | [elioc1341](https://github.com/elioc1341)                           | TBD                                              |
 | Henry Wong            | [eternal-loading-screen](https://github.com/eternal-loading-screen) | [Video](https://youtu.be/lVY6GPIFggY)            |
-| Vinod Anbalagan       | [VinodAnbalagan](https://github.com/VinodAnbalagan)                 | [Video](https://vimeo.com/1105242144?share=copy) |
+| Vinod Anbalagan       | [VinodAnbalagan](https://github.com/VinodAnbalagan)                 | [XGBoost - Video](https://vimeo.com/1105242144?share=copy) |
