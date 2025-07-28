@@ -149,6 +149,86 @@ This will produce more meaningful and interpretable segments by avoiding multico
 Our plan to use tree-based models (Random Forest, etc.) is confirmed as the best approach.
 These models are robust to the data's structure, and we will proceed with a limited, carefully selected feature set.
 
+## KMeans Clustering 
+<ins>**METHOD**</ins>
+
+KMeans Clustering on the updated dataset with engineered features - two methods were reviewed for to achieve the best value of k:
+
+   1. **Elbow method** - this is tested over a range of k clusters to calculate WCSS (*within cluster sum of squares*), and want lower values. We then identify the "elbow", which shows a sharp decrease in rate of change of WCSS as k increases. This identifies the best value of k to use as the number of clusters.
+   2. **Silhouette Scoring** - for KMeans clustering, the silhouette score is a metric use to evaluate the quality of clustering, and seeing values closer to 1 indicate better clustering.<br/><br/>
+
+
+For our analysis, we use the k value from the silhouette scoring, because the score helps measure how well the cluster values are distinct from the others. Furthermore:
+   - We want to try and distinguish clear customer groups to identify customer purchasing behaviours,
+   - Businesses looking to identify and understand customer profiles may need the additional differentiation or nuance,
+   - Having more quality separation will improve targeting their ideal market(s). 
+
+For testing, we make the following assumptions/restrictions:
+   - maximum number of clusters is set to 10  
+   - test iterations are also set to 10
+   - random seed is set to 42<br/><br/>
+
+
+To allow KMeans clustering the following fields were also encoded as follows:
+| region_grouped      | age_group          | income_bracket          |  frequency_percentile          | 
+|---------------------|--------------------|-------------------------|--------------------------------|
+| North + East: 0     | Young_Adult: 0     | Low_Income: 0           | 0-25%: 0.25                    |
+| West: 1             | Adult: 1           | Medium_Income: 1        | 25-50%: 0.50                   |
+| South: 2            | Middle_Aged: 2     | High_Income: 2          | 50-75%: 0.75                   |
+| -                   | Senior: 3          | -                       | 75-100%: 1.00                  |
+<br/><br/>
+
+<ins>**CLUSTERING RESULTS**</ins>
+
+The KMeans Clustering would first run on the original base features, and then tested with base features alongside different engineered features to see if there were meaningful changes in clusters.
+
+The silhouette scores and k values for each run were:
+| Test                                | Elbow K   | Silhouette K  |  Silhouette Score  | 
+|-------------------------------------|-----------|---------------|--------------------|
+| Base Fields                         | 5         | 10            | 0.6110             |
+| Base Fields + Core Scores           | 6         | 8             | 0.5466             |
+| Base Fields + Behavioral Ratios     | 4         | 10            | 0.5574             |
+| Base Fields + Key Segments/Flags    | 3         | 2             | 0.6411             |
+| Base Fields + Demographics/Income   | 4         | 9             | 0.5723             |
+| Base Fields + Percentiles           | 5         | 7             | 0.5654             |
+| Base Fields + Log Transformed       | 5         | 9             | 0.5734             |
+
+From the results, we see that the base run had the best silhouette score, and generated the following clusters with the following features below. Note that the clusters are ranked in descending order from highest average `loyalty_score`, `purchase_amount`, `purchase_frequency` and `annual_income`:
+
+| Cluster                     | 0          | 6          |  8         | 4          | 2          | 9          | 5          | 7          | 1          | 3          | 
+|-----------------------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|
+| Customer                    | 15         | 37         | 17         | 36         | 22         | 19         | 19         | 17         | 42         | 14         |
+| Size Proportion of Dataset  | 6.30%      | 15.55%     | 7.14%      | 15.13%     | 9.24%      | 7.98%      | 7.98%      | 7.14%      | 17.65%     | 5.88%      |
+| Average Age                 | 54.33      | 50.05      | 47.53      | 41.89      | 39.36      | 37.42      | 32.68      | 31.41      | 27.50      | 24.00      |
+| Average Income              | $74,333.33 | $70,027.03 | $67,529.41 | $61,472.22 | $59,590.91 | $57,157.89 | $52,631.58 | $51,294.12 | $44,738.10      | $32,000.00 |
+| Average Purchase Amount     | $633.33    | $520.27    | $550.00    | $479.72    | $448.64    | $416.84    | $366.32    | $345.88    | $245.95      | $170.00    |
+| Average Loyalty Score       | 9.43       | 8.92       | 8.50       | 7.73       | 7.21       | 6.77       | 5.91       | 5.65       | 4.30       | 3.30       |
+| Average Region              | 1.60       | 1.00       | 0.00       | 2.00       | 1.00       | 0.00       | 2.00       | 0.53       | 0.05       | 1.93       |
+| Average Purchase Frequency  | 27.40      | 24.81      | 23.41      | 21.53      | 20.59      | 19.74      | 17.79      | 17.35      | 14.14      | 11.07      |
+
+Over all the clustering runs (*with the exception of the Key Segments/Flags one, as it only has 2 clusters*), all clusters formed show a very strong almost linear trend indicating that as age increases, so does purchase amount, loyalty, and purchase frequency. I.e. they all have similar results, indicating that the base fields may be enough to make informed clustering choices for this dataset. <br/><br/>
+
+<ins>**TAKEAWAYS**</ins>
+
+Comparing the silhouette scores across all the runs, the base set has the highest score, and combining with the engineered features lowered the score slightly - which indicate that the engineered feature sets do not significantly improve clustering quality. This also suggests that the base fields are already sufficient to capture the customer segmentation for this dataset (`age`, `annual_income`, `purchase_amount`, `loyalty_score`, `annual_income`, `purchase_frequency`). 
+
+The feature `region_grouped` did not seem to specifically provide further insight into further behaviour - for example, customers in a designated region did not fully dominate the highest spending clusters. It may be worth exploring further clustering by region due to potential differences in regional purchasing behaviours.
+
+Throughout all except the Key Segment Flag runs, most of the clusters are made of a progression from young, low income, low spending customers to senior, high income, high spending customer segments, which are consistent with the base run. This does not mean the engineered features should be ignored for clustering with other customer datasets - they can be useful to provide further insight, or highly targeted segmenting based on the business needs. For example:
+*   **Core Scores & Behavioural Ratios:** The clusters provide further information on customers that directly translate to business strategy for each segment. It helps stakeholders understand the risks and opportunities that come with each segment, and the actionable appropriate methods can be used.
+*   **Percentiles & Key Segments and Flags:** The clusters formed from this approach provide clear indicators of who the top customers are, and automatically adjusts for different markets by using a relational comparison. Stakeholders using these features have a full understanding that most of their resources should be spent understanding this customer base further and to retain or grow them.
+*   **Log Transformations:** While for this dataset it may not have shown significant results, this can be very useful for the analytics side for businesses trying to handle outliers. With much larger datasets, it is worth trying to cluster these to analyze further customer spending habits.
+<br/><br/>
+
+That being said, there are some caveats which may have led to these results:
+*   **Dataset Size:** The dataset may be too small to show the benefits from feature engineering. 238 customers is quite a small sample size when considering B2C situations.
+*   **Correlation Too High:** The synthetic data set shows a strong linear relationship between age and income across the entire dataset. This will not be true for real customer datasets, and the engineered features would likely provide more value and insight into the different customer clusters.
+<br/><br/>
+
+With regards to the business objectives, the clustering with the base features is the predictable and sufficient to identify customer segments when using this synthetic dataset. However, it is not conclusive if these features are sufficient when handling real production data which tends to be messier. It's likely using them would be a strong starting point, but will require further testing to confirm this conclusion. 
+
+<br/><br/>
+
 ## XG Boost
 
 ### **Executive Summary**
@@ -261,13 +341,16 @@ The K-means clustering analysis identified 6 optimal customer segments:
 
 ![XGBoost Feature IMportance](https://github.com/elioc1341/customer_purchasing_behaviour/blob/a03903fe8a8087e11b1f4bdbb58e694a72ccae49/reports/boosting/feature_importance.png)
 
+<br/><br/>
 ## Neural Networks
 --To be added--
+<br/><br/>
 ## Linear Regression
 --To be added--
+<br/><br/>
 ## Random Forest
 --To be added--
-
+<br/><br/>
 ## Conclusions & Future Considerations
 
 **The analysis was conducted on a synthetic dataset of customer transactions, which explains the exceptionally high model performance metrics observed throughout the study, this does not reflect the real world data. The results and conclusion are based on a hypothetical customer base based on the synthetic data**.
