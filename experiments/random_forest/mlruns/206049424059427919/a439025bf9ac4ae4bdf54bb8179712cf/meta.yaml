@@ -1,0 +1,14 @@
+artifact_uri: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/a439025bf9ac4ae4bdf54bb8179712cf/artifacts
+end_time: 1753582835365
+entry_point_name: ''
+experiment_id: '206049424059427919'
+lifecycle_stage: active
+run_id: a439025bf9ac4ae4bdf54bb8179712cf
+run_name: Test_Setup
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753582835346
+status: 3
+tags: []
+user_id: labber

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/959a132af6404092afa935d4a5f580f6/artifacts
+end_time: 1753689298884
+entry_point_name: ''
+experiment_id: '206049424059427919'
+lifecycle_stage: active
+run_id: 959a132af6404092afa935d4a5f580f6
+run_name: Churn_Production_Clean_Features
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753689285982
+status: 3
+tags: []
+user_id: labber

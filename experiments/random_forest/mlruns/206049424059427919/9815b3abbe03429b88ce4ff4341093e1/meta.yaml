@@ -1,0 +1,14 @@
+artifact_uri: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/9815b3abbe03429b88ce4ff4341093e1/artifacts
+end_time: 1753416380493
+entry_point_name: ''
+experiment_id: '206049424059427919'
+lifecycle_stage: active
+run_id: 9815b3abbe03429b88ce4ff4341093e1
+run_name: CLV_Production_Clean_Features
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753416366712
+status: 3
+tags: []
+user_id: labber

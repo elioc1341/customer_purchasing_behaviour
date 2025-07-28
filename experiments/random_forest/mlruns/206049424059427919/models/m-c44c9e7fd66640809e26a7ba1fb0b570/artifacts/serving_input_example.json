@@ -1,0 +1,30 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "customer_value_score",
+      "age",
+      "spend_to_income_ratio",
+      "growth_potential_score"
+    ],
+    "data": [
+      [
+        0.1365,
+        25,
+        0.0044,
+        74
+      ],
+      [
+        0.469,
+        34,
+        0.0064,
+        100
+      ],
+      [
+        0.7161,
+        45,
+        0.0077,
+        57
+      ]
+    ]
+  }
+}
