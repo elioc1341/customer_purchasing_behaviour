@@ -334,7 +334,7 @@ Example: Customer #23
 
 **Strategy**:
 
-- Targeted product redommendations
+- Targeted product recommendations
 - Premium tier offerings
 - Bundle Promotions
 
