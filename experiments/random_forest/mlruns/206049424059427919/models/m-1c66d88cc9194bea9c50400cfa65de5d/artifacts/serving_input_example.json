@@ -1,0 +1,54 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "age",
+      "annual_income",
+      "spend_to_income_ratio",
+      "region_North",
+      "region_South",
+      "region_West",
+      "customer_value_score",
+      "purchase_frequency",
+      "is_loyal",
+      "is_frequent"
+    ],
+    "data": [
+      [
+        46,
+        66000,
+        0.0077,
+        true,
+        false,
+        false,
+        0.7302,
+        22,
+        false,
+        false
+      ],
+      [
+        50,
+        70000,
+        0.0086,
+        false,
+        false,
+        true,
+        0.8983,
+        25,
+        true,
+        true
+      ],
+      [
+        24,
+        32000,
+        0.0053,
+        false,
+        true,
+        false,
+        0.0458,
+        11,
+        false,
+        false
+      ]
+    ]
+  }
+}

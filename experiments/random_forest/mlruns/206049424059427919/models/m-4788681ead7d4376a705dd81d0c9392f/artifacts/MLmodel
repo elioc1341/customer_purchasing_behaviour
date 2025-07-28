@@ -1,0 +1,29 @@
+artifact_path: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-4788681ead7d4376a705dd81d0c9392f/artifacts
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-4788681ead7d4376a705dd81d0c9392f
+model_size_bytes: 1287
+model_uuid: m-4788681ead7d4376a705dd81d0c9392f
+prompts: null
+run_id: 103b4e849df84e0ba355745bf1093f2d
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "customer_value_score", "required": true},
+    {"type": "long", "name": "age", "required": true}, {"type": "double", "name":
+    "spend_to_income_ratio", "required": true}, {"type": "long", "name": "growth_potential_score",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    4]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-07-26 00:23:13.790333'

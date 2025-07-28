@@ -1,0 +1,10 @@
+artifact_location: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-c549e6b2b4a54d85907e69251a9b2dbd/artifacts
+creation_timestamp: 1753416376764
+experiment_id: '206049424059427919'
+last_updated_timestamp: 1753416380486
+model_id: m-c549e6b2b4a54d85907e69251a9b2dbd
+model_type: null
+name: production_clv_model
+source_run_id: 9815b3abbe03429b88ce4ff4341093e1
+status: 2
+status_message: null

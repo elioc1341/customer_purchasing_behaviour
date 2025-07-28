@@ -1,0 +1,10 @@
+artifact_location: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/models/m-319fe1d98ce74cae83f08e2d13da2e71/artifacts
+creation_timestamp: 1753538621746
+experiment_id: '206049424059427919'
+last_updated_timestamp: 1753538625039
+model_id: m-319fe1d98ce74cae83f08e2d13da2e71
+model_type: null
+name: kmeans_segmentation_model
+source_run_id: f6aab893fec94d848e95ae0b4e0d742b
+status: 2
+status_message: null
