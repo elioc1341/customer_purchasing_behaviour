@@ -1,0 +1,14 @@
+artifact_uri: file:///home/labber/dsi/week15-16/customer_purchasing_behaviour/experiments/random_forest/mlruns/206049424059427919/53fdc7f02b354766a1667f25e9a2b74d/artifacts
+end_time: 1753689267789
+entry_point_name: ''
+experiment_id: '206049424059427919'
+lifecycle_stage: active
+run_id: 53fdc7f02b354766a1667f25e9a2b74d
+run_name: Churn_RandomForest_Classification
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753689248534
+status: 3
+tags: []
+user_id: labber
