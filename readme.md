@@ -618,8 +618,8 @@ This project was developed through a collaborative effort as our Team Project fo
 
 | Member Name           | GitHub Account                                                      | Reflection Video                                 |
 | --------------------- | ------------------------------------------------------------------- | ------------------------------------------------ |
-| Antonio M. Lancuentra | [AntonioMLancuentra](https://github.com/AntonioMLancuentra)         | TBD                                              |
+| Antonio M. Lancuentra | [AntonioMLancuentra](https://github.com/AntonioMLancuentra)         | [Link](https://youtu.be/2UwBOvK_caw)             |
 | Calvin Ho             | [c5ho](https://github.com/c5ho)                                     | [Link](https://youtu.be/OETIGZAoT2E)                                              |
-| Eliot Choy            | [elioc1341](https://github.com/elioc1341)                           | [Link](https://drive.google.com/file/d/1_92ZJie72LRiiUEHGULJjhS0xlPO33pe/view?usp=sharing)                                              |
+| Eliot Choy            | [elioc1341](https://github.com/elioc1341)                           | [Link](https://drive.google.com/file/d/1_92ZJie72LRiiUEHGULJjhS0xlPO33pe/view?usp=sharing)          |
 | Henry Wong            | [eternal-loading-screen](https://github.com/eternal-loading-screen) | [Video](https://youtu.be/lVY6GPIFggY)            |
 | Vinod Anbalagan       | [VinodAnbalagan](https://github.com/VinodAnbalagan)                 | [XGBoost - Video](https://vimeo.com/1105242144?share=copy) |
