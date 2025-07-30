@@ -1,0 +1,9 @@
+mlruns/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.vscode/settings.json
+logs/
+models/*.pkl
+.DS_Store
