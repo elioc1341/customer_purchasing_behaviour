@@ -66,6 +66,7 @@ Our architechture is designed for reproductibility, scalability, and ease of dep
 | python-dotenv | 1.0.0 |
 | click | 8.1.7 |
 | Optuna | 4.3 |
+| Shap | 0.48.0 |
 | xgboost | 1.7.6 |
 | plotly | 5.1.8 |
 | joblib | 1.3.2 |
@@ -376,7 +377,7 @@ Highlights of the output:
 - Best net: 32 neurons, 16 neurons, 8 neurons, 4 neurons, 1 output neuron
 - Mean Absolute Error (mae): 1.11 R2: 1.00
 
-For further information, check folder Neural Networks inside Experiments and Reports.
+For further information, check folders Neural Networks inside Experiments, Models and Reports.
 
 <br/><br/>
 
