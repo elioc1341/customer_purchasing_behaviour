@@ -1,0 +1,16 @@
+FeedforwardNN(
+  (layers): Sequential(
+    (0): Linear(in_features=9, out_features=32, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+    (3): Linear(in_features=32, out_features=16, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.2, inplace=False)
+    (6): Linear(in_features=16, out_features=8, bias=True)
+    (7): ReLU()
+    (8): Dropout(p=0.2, inplace=False)
+    (9): Linear(in_features=8, out_features=4, bias=True)
+    (10): ReLU()
+    (11): Linear(in_features=4, out_features=1, bias=True)
+  )
+)
