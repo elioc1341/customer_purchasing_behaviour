@@ -5,3 +5,4 @@ mlruns has not been uploaded to GitHub. In order to have available the informati
 Before running the code, navigate in the terminal to the folder you want the folder mlruns to be created, activate the conda environment, run the command 
 mlflow ui
 Open a browser and paste the url that you will see in the terminal
+Then you can run the code
