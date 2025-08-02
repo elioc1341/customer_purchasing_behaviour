@@ -1,0 +1,7 @@
+FeedforwardNN(
+  (layers): Sequential(
+    (0): Linear(in_features=9, out_features=30, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=30, out_features=1, bias=True)
+  )
+)
