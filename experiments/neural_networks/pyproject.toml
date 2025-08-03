@@ -1,9 +1,0 @@
-[build-system]
-requires = ["setuptools>=45", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "utils"
-version = "0.1.0"
-description = "Your package description"
-# Add other metadata as needed
